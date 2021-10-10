@@ -1,10 +1,10 @@
 # Title (replace with your title)
 
-Introductory paragraph (replace this with your text)
+A summary of useful Regex expressions.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This article goes over useful regex expressions that allow for searching strings for fundamental components to enhance the elegenace of search functions and allow search techniques that are not cvered by built in javascript functions or node packages.
 
 ## Table of Contents
 
@@ -72,8 +72,18 @@ Example: /bcat/b matches "cat" in "the cat scats" but not the characters "cat" c
 
 ### Back-references
 
+"Backreferences match the same text as previously matched by a capturing group. Suppose you want to match a pair of opening and closing HTML tags, and the text in between. By putting the opening tag into a backreference, we can reuse the name of the tag for the closing tag. " - https://www.regular-expressions.info/backref.html 10/10/21
+
+Example: ([d-f])/1Z/1 matches "dZf" because the back reference /1 refers to the same capturing group that matches the first character in this string.
+
 ### Look-ahead and Look-behind
+
+"Lookahead and lookbehind, collectively called “lookaround”, are zero-length assertions just like the start and end of line, and start and end of word anchors explained earlier in this tutorial. The difference is that lookaround actually matches characters, but then gives up the match, returning only the result: match or no match. That is why they are called “assertions”. They do not consume characters in the string, but only assert whether a match is possible or not. Lookaround allows you to create regular expressions that are impossible to create without them, or that would get very longwinded without them." - https://www.regular-expressions.info/lookaround.html 10/10/21
+
+Example p(?!q) matches a p not followed by a q and p(?1q) matches a p followed by a q.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+https://github.com/seanPatrickArnold
+
+The author has worked in materials science, interface science and web/software development in pursuit of refining the interface between the material andd immaterial worlds.
